@@ -1,0 +1,318 @@
+# format = """
+# $username\
+# $directory\
+# $git_branch\
+# $character
+# """
+
+format = """
+$username\
+$directory\
+$git_branch\
+$fill\
+$line_break\
+$character
+"""
+
+# format = """
+# [┌ ](cyan)\
+# $os\
+# $username\
+# $directory\
+# $git_branch\
+# $git_commit\
+# $git_state\
+# $git_metrics\
+# $git_status\
+# $fill\
+# $rust\
+# $python\
+# $package\
+# $line_break\
+# [└─](cyan) """
+
+[username]
+show_always = true
+style_user = "bold green"
+style_root = "bold red"
+format = "[$user]($style) "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = ""
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[fill]
+symbol = " "
+
+[aws]
+symbol = "  "
+format = "[$symbol]($style) "
+style = "yellow"
+
+[buf]
+symbol = " "
+format = "[$symbol]($style) "
+style = "blue"
+
+[bun]
+symbol = " "
+format = "[$symbol]($style) "
+style = "bright-yellow"
+
+[c]
+symbol = " "
+format = "[$symbol]($style) "
+style = "cyan"
+
+[cpp]
+symbol = " "
+format = "[$symbol]($style) "
+style = "blue"
+
+[cmake]
+symbol = " "
+format = "[$symbol]($style) "
+style = "green"
+
+[conda]
+symbol = " "
+format = "[$symbol]($style) "
+style = "green"
+
+[crystal]
+symbol = " "
+format = "[$symbol]($style) "
+style = "bright-white"
+
+[dart]
+symbol = " "
+format = "[$symbol]($style) "
+style = "cyan"
+
+[deno]
+symbol = " "
+format = "[$symbol]($style) "
+style = "bright-green"
+
+[directory]
+read_only = " 󰌾"
+format = "[$path]($style)[$read_only]($read_only_style) "
+read_only_style = "red"
+
+[docker_context]
+symbol = " "
+format = "[$symbol]($style) "
+style = "blue"
+
+[elixir]
+symbol = " "
+format = "[$symbol]($style) "
+style = "magenta"
+
+[elm]
+symbol = " "
+format = "[$symbol]($style) "
+style = "cyan"
+
+[fennel]
+symbol = " "
+format = "[$symbol]($style) "
+style = "yellow"
+
+# [git_branch]
+# symbol = " "
+# format = "[$symbol]($style) "
+# style = "purple"
+
+[git_status]
+conflicted = ''
+ahead = ''
+behind = ''
+diverged = ''
+up_to_date = '󰄬'
+untracked = ''
+stashed = ''
+modified = ''
+staged = '[++\($count\)](green)'
+renamed = ''
+deleted = ''
+
+
+[golang]
+symbol = " "
+format = "[$symbol]($style) "
+style = "cyan"
+
+[guix_shell]
+symbol = " "
+format = "[$symbol]($style) "
+style = "yellow"
+
+[haskell]
+symbol = " "
+format = "[$symbol]($style) "
+style = "purple"
+
+[haxe]
+symbol = " "
+format = "[$symbol]($style) "
+style = "bright-yellow"
+
+[hostname]
+ssh_symbol = " "
+format = "[$ssh_symbol]($style) "
+style = "cyan"
+
+[java]
+symbol = " "
+format = "[$symbol]($style) "
+style = "red"
+
+[julia]
+symbol = " "
+format = "[$symbol]($style) "
+style = "green"
+
+[kotlin]
+symbol = " "
+format = "[$symbol]($style) "
+style = "blue"
+
+[lua]
+symbol = " "
+format = "[$symbol]($style) "
+style = "blue"
+
+[memory_usage]
+symbol = "󰍛 "
+format = "[$symbol]($style) "
+style = "red"
+
+[meson]
+symbol = "󰔷 "
+format = "[$symbol]($style) "
+style = "yellow"
+
+[nim]
+symbol = "󰆥 "
+format = "[$symbol]($style) "
+style = "bright-yellow"
+
+[nix_shell]
+symbol = " "
+format = "[$symbol]($style) "
+style = "blue"
+
+[nodejs]
+symbol = " "
+format = "[$symbol]($style) "
+style = "green"
+
+[ocaml]
+symbol = " "
+format = "[$symbol]($style) "
+style = "yellow"
+
+[os]
+disabled = false
+style = "bright-red"
+format = "[$symbol]($style) "
+
+[package]
+symbol = "󰏗 "
+format = "[$symbol]($style) "
+style = "yellow"
+
+[perl]
+symbol = " "
+format = "[$symbol]($style) "
+style = "blue"
+
+[php]
+symbol = " "
+format = "[$symbol]($style) "
+style = "bright-cyan"
+
+[python]
+symbol = " "
+format = "[$symbol]($style) "
+style = "yellow"
+
+[rlang]
+symbol = "󰟔 "
+format = "[$symbol]($style) "
+style = "blue"
+
+[ruby]
+symbol = " "
+format = "[$symbol]($style) "
+style = "red"
+
+[rust]
+symbol = "󱘗 "
+format = "[$symbol]($style) "
+style = "red"
+
+[scala]
+symbol = " "
+format = "[$symbol]($style) "
+style = "red"
+
+[swift]
+symbol = " "
+format = "[$symbol]($style) "
+style = "bright-red"
+
+[zig]
+symbol = " "
+format = "[$symbol]($style) "
+style = "yellow"
+
+[gradle]
+symbol = " "
+format = "[$symbol]($style) "
+style = "green"
+
