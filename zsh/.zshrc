@@ -82,12 +82,16 @@ ZSH_THEME="too-simple"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    # vi-mode
     colored-man-pages
     zsh-autosuggestions
     zsh-syntax-highlighting
     you-should-use
     zsh-bat
 )
+
+# accept autosuggestion using CTRL+<space>
+bindkey '^ ' autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
 
