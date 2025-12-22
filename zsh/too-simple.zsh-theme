@@ -1,3 +1,5 @@
+## Add to ~/.oh-my-zsh/custom/themes/
+
 local PR_USER PR_USER_OP PR_PROMPT PR_HOST
 
 # Check the UID
@@ -36,7 +38,8 @@ local git_branch='$(git_prompt_info)'
 local venv_prompt='$(virtualenv_prompt_info)' 
 local time_stamp='%F{yellow}%T%f'
 
-PROMPT="${venv_prompt}${current_dir} ${git_branch}$PR_PROMPT "
+PROMPT="
+${venv_prompt}${current_dir} ${git_branch}$PR_PROMPT "
 # RPROMPT="${return_code} ${time_stamp}"
 RPROMPT="${return_code}"
 
