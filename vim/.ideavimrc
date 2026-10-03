@@ -1,0 +1,162 @@
+" Basic settings
+set scrolloff=5
+set history=1000
+set showmode
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set gdefault
+set clipboard+=unnamed
+
+set ideajoin
+set ideamarks
+set idearefactormode=keep
+set ideastatusicon=gray
+
+" Leader
+map <space> <nop>
+let mapleader="\<space>"
+
+map H ^
+map L $
+
+imap jk <Esc>
+
+nmap <leader>c  <Action>(CommentByLineComment)
+vmap <leader>c  <Action>(CommentByLineComment)
+nmap <leader>C  <Action>(CommentByBlockComment)
+vmap <leader>C  <Action>(CommentByBlockComment)
+
+nmap <leader>rn <Action>(RenameElement)
+nmap <leader>nh :noh<CR>
+
+" Navigation history
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
+
+" g-commands
+nmap gd  <Action>(GotoDeclaration)
+nmap gy  <Action>(GotoTypeDeclaration)
+nmap gr  <Action>(ShowUsages)
+nmap gR  <Action>(FindUsages)
+nmap gi  <Action>(GotoImplementation)
+nmap gI  <Action>(QuickImplementations)
+nmap gh  <Action>(QuickJavaDoc)
+nmap gc  <Action>(GotoClass)
+nmap gf  <Action>(GotoFile)
+nmap gs  <Action>(FileStructurePopup)
+nmap gS  <Action>(GotoSymbol)
+nmap gn  <Action>(ShowNavBar)
+nmap g]  <Action>(GotoNextError)
+nmap g[  <Action>(GotoPreviousError)
+
+" gr family
+nmap grn <Action>(RenameElement)
+nmap gri <Action>(GotoImplementation)
+nmap gra <Action>(ShowIntentionActions)
+
+" quick peek without leaving cursor position
+nmap <leader>qd <Action>(QuickPreview)
+nmap <leader>qD <Action>(QuickTypeDefinition)
+nmap <leader>se <Action>(ShowErrorDescription)
+
+" Bracket motions
+nmap [m <Action>(MethodUp)
+nmap ]m <Action>(MethodDown)
+nmap [e <Action>(GotoPreviousError)
+nmap ]e <Action>(GotoNextError)
+nmap [c <Action>(JumpToLastChange)
+nmap ]c <Action>(JumpToNextChange)
+nmap [u <Action>(GotoPrevElementUnderCaretUsage)
+nmap ]u <Action>(GotoNextElementUnderCaretUsage)
+nmap [o <Action>(PreviousOccurence)
+nmap ]o <Action>(NextOccurence)
+nmap [b <Action>(PreviousTab)
+nmap ]b <Action>(NextTab)
+
+" move current line/block up or down
+nmap K <Action>(MoveStatementUp)
+nmap J <Action>(MoveStatementDown)
+vmap K <Action>(MoveStatementUp)
+vmap J <Action>(MoveStatementDown)
+
+" Folding
+nmap za <Action>(ExpandCollapseToggleAction)
+nmap zc <Action>(CollapseRegion)
+nmap zo <Action>(ExpandRegion)
+nmap zM <Action>(CollapseAllRegions)
+nmap zR <Action>(ExpandAllRegions)
+nmap zz <Action>(EditorScrollToCenter)
+
+" Multi-cursor / occurrence selection
+nmap <leader>sn <Action>(SelectNextOccurrence)
+nmap <leader>sp <Action>(UnselectPreviousOccurrence)
+nmap <leader>so <Action>(SelectAllOccurrences)
+
+" Code editing
+nmap <leader>fc <Action>(ReformatCode)
+nmap <leader>oi <Action>(OptimizeImports)
+nmap <leader>sd <Action>(SafeDelete)
+nmap <leader>uw <Action>(Unwrap)
+nmap <leader>re <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>gc <Action>(Generate)
+nmap gt         <Action>(GotoTest)
+nmap <leader>om <Action>(OverrideMethods)
+nmap <leader>im <Action>(ImplementMethods)
+
+" Run / debug
+nmap <leader>rc <Action>(ContextRun)
+nmap <leader>rr <Action>(Rerun)
+nmap <leader>rt <Action>(RerunTests)
+nmap <leader>rs <Action>(Stop)
+nmap <leader>dc <Action>(ContextDebug)
+nmap <leader>db <Action>(ToggleLineBreakpoint)
+nmap <leader>dv <Action>(ViewBreakpoints)
+
+" Windows / splits / tabs
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+nmap <leader>sH <Action>(SplitHorizontally)
+nmap <leader>sV <Action>(SplitVertically)
+nmap <leader>wu <Action>(UnsplitAll)
+nmap <leader>wm <Action>(MaximizeEditorInSplit)
+
+nmap <Tab>   <Action>(NextTab)
+nmap <S-Tab> <Action>(PreviousTab)
+nmap <leader>xx <Action>(CloseContent)
+nmap <leader>xa <Action>(CloseAllEditors)
+nmap <leader>xo <Action>(CloseAllEditorsButActive)
+nmap <leader>p  <Action>(PinActiveEditorTab)
+
+" IDE panels
+nmap <leader>oe <Action>(ActivateProjectToolWindow)
+nmap <leader>ot <Action>(ActivateTerminalToolWindow)
+nmap <leader>ov <Action>(ActivateVersionControlToolWindow)
+nmap <leader>op <Action>(ActivateProblemsViewToolWindow)
+nmap <leader>ob <Action>(ActivateBookmarksToolWindow)
+nmap <leader>od <Action>(ActivateTODOToolWindow)
+nmap <leader>os <Action>(ActivateStructureToolWindow)
+nmap <leader>or <Action>(ActivateRunToolWindow)
+nmap <leader>og <Action>(ActivateDebugToolWindow)
+nmap <leader>we <Action>(FocusEditor)
+
+" Bookmarks
+nmap mm <Action>(ToggleBookmark)
+nmap ms <Action>(ShowBookmarks)
+
+" Search
+nmap ga <Action>(SearchEverywhere)
+nmap <leader>fp <Action>(FindInPath)
+nmap <leader>rp <Action>(ReplaceInPath)
+
+" Plugins
+set surround
+set exchange
+set highlightedyank
+let g:highlightedyank_highlight_duration = "1000"
+
+" Alias
+nmap <C-a> ggVG"+y
