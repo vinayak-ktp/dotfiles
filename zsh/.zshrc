@@ -92,6 +92,12 @@ plugins=(
 
 # accept autosuggestion using CTRL+<space>
 bindkey '^ ' autosuggest-accept
+# Option+<space> also accepts. Terminal.app cannot send Cmd-modified keys
+# (and Cmd+Space is taken by Spotlight), so this is the closest alternative.
+# This profile has "Use Option as Meta Key" enabled, so Option+Space arrives
+# as ESC+space; it arrives as a non-breaking space otherwise. Bind both.
+bindkey '\e ' autosuggest-accept
+bindkey $'\xc2\xa0' autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
 
